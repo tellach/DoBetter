@@ -6,8 +6,8 @@ import express from "express"
 import todolisteRoutes from "./routes/todolisteRoutes";
 import defiRoutes from "./routes/defiRoutes";
 import messageRoutes from "./routes/messageRoutes";
+import groupeRoutes from "./routes/groupeRoutes";
 
-//mongoose.connect("mongodb://localhost:27017/tc", { useNewUrlParser: true });
 
 
 const app = express();
@@ -29,13 +29,14 @@ app.use(bodyParser.json());
 app.use('/user',userRoutes);
 app.use('/todoliste',todolisteRoutes);
 app.use('/defi',defiRoutes);
-app.use('/message',messageRoutes)
+app.use('/message',messageRoutes);
+app.use('/groupe',groupeRoutes)
 
 //app.use('/admin',adminRoutes);
 
 
 
 
+console.log('It works !')
 
-
-app.listen(8080);
+app.listen(4000);

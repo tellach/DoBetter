@@ -13,11 +13,13 @@ export const UserSchema=new Schema({
     },
     email: {
         type:String,
-        require:'email is required'
+        require:'email is required',
+        unique:true
     },
     pseudo: {
         type:String,
-        require:'pseudo is required'
+        require:'pseudo is required',
+        unique: true
     },
     password: {
         type:String,

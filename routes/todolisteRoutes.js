@@ -1,13 +1,20 @@
 const todolisteController=require('../controllers/todolisteController');
-import {addTodoliste, getTodoliste,deleteTodoliste,updateTodoliste} from "../controllers/todolisteController";
+import {
+    addTodoliste,
+    getTodoliste,
+    deleteTodoliste,
+    updateTodoliste,
+    getTodolisteByPseudo
+} from "../controllers/todolisteController";
 
 import express from 'express';
-const adminRouter=express.Router();
+const todolisteRouter=express.Router();
 
-adminRouter.post('/',addTodoliste);
-adminRouter.get('/',getTodoliste);
-adminRouter.delete('/:idTodoliste',deleteTodoliste);
-adminRouter.put('/:idTodoliste',updateTodoliste);
+todolisteRouter.get('/:pseudo',getTodolisteByPseudo);
+todolisteRouter.post('/',addTodoliste);
+todolisteRouter.get('/',getTodoliste);
+todolisteRouter.delete('/:idTodoliste',deleteTodoliste);
+todolisteRouter.put('/:idTodoliste',updateTodoliste);
 
 
-export default adminRouter;
+export default todolisteRouter;

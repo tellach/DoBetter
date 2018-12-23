@@ -20,6 +20,15 @@ const getTodoliste = (req,res)=>{
         res.json(todoliste);
     })
 };
+const getTodolisteByPseudo=(req,res)=>{
+    Todoliste.findOne({pseudo:req.params.pseudo}).then((userFound)=>{
+        if(userFound)
+        {
+            res.json(userFound)
+        }
+        else {res.json({err:'the todoliste is empty'})}
+    })
+}
 const deleteTodoliste = (req,res)=>{
     Todoliste.remove(
         {_id:req.params.idTodoliste},
@@ -42,4 +51,4 @@ const updateTodoliste = (req,res)=>{
     )
 };
 
-export {addTodoliste,getTodoliste,deleteTodoliste,updateTodoliste}
+export {addTodoliste,getTodoliste,deleteTodoliste,updateTodoliste,getTodolisteByPseudo}

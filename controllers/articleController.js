@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 //const Article=mongoose.model("Article",ArticleSchema);
 
-
+/*
 const getArticle = (req,res)=>{//articles
     Article.find({},(err,articles)=>{
         if(err) res.send(err);
@@ -40,4 +40,4 @@ const updateArticle= (req,res)=>{
 };
 
 
-export {addArticle,getArticle,deleteArticle,updateArticle}
+export {addArticle,getArticle,deleteArticle,updateArticle}*/
